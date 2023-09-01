@@ -1,0 +1,26 @@
+<!-- Navbar Start -->
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/admin/">Django Company - Admin Page</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == "/" %} active {% endif %}" aria-current="page" href="{% url 'home' %}">Home Page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == "/about/" %} active {% endif %}" href="{% url 'about' %}">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == "/vision/" %} active {% endif %}" href="{% url 'vision' %}">Vision</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == "/contact/" %} active {% endif %}" href="{% url 'contact' %}">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- Navbar End -->

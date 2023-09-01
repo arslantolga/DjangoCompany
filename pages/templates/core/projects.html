@@ -1,0 +1,13 @@
+<!-- Projects Start -->
+<div class="container">
+    <div class="row">
+        <p class="display-4">Projects</p>
+        <hr>
+    </div>
+    <div class="row">
+        {% for item in fake_db_projects %}
+        <div class="col-4 col-md-3 col-lg mb-2"><img class="img-thumbnail" src="{{item}}"></div>
+        {% endfor %}
+    </div>
+    </div>
+    <!-- Projects End -->

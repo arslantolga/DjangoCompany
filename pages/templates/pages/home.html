@@ -1,0 +1,110 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<!-- Carousel Start -->
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      {% for item in FAKE_DB_CAROUSEL %} 
+      <!-- For döngüsü içinde döngünün ilk döngü olup olmadığını kontrol için -->
+      <div class="carousel-item {% if forloop.first %}active {% endif %}">
+        <img src="{{item}}" class="d-block w-100" alt="...">
+      </div>
+      {% endfor %}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<!-- Carousel End -->
+
+<!-- Hero COntent Start -->
+<div class="container-fluid">
+    <div class="row bg-dark">
+        <div class="col-6 bg-light py-3 mt-4 mb-4 rounded-3 offset-3 text-center">
+            <p class="display-4">Django Company</p>
+            <p class="display-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, iste?</p>
+        </div>
+    </div>
+</div>
+<!-- Hero COntent End -->
+
+<!-- About Us Start -->
+<div class="container-fluid px-0">
+    <div class="row">
+        <div class="col-sm-6 mt-2">
+            <img src="https://picsum.photos/id/87/300/150" class="w-100">
+        </div>
+        <div class="col-sm-6 align-self-center text-center">
+            <p class="display-3">About Us</p>
+            <p class="display-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ipsa in officiis facere fugiat dolore.</p>
+        </div>
+    </div>
+</div>
+<!-- About Us End -->
+
+<!-- Products Start -->
+<div class="container">
+    <div class="row">
+        <p class="display-4 mt-2 mb-2" >Products</p>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mr-3">
+            <div class="card" style="width: 15rem;">
+                <img src="https://picsum.photos/id/212/200/150" class="card-img-top img-thumbnail" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 1</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <a href="#" class="btn btn-primary">Inspect</a>
+                </div>
+              </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mr-3">
+            <div class="card" style="width: 15rem;">
+                <img src="https://picsum.photos/id/22/200/150" class="card-img-top img-thumbnail" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 2</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <a href="#" class="btn btn-primary">Inspect</a>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mr-3">
+            <div class="card" style="width: 15rem;">
+                <img src="https://picsum.photos/id/27/200/150" class="card-img-top img-thumbnail" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 3</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <a href="#" class="btn btn-primary">Inspect</a>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-3 mb-3 mr-3">
+            <div class="card" style="width: 15rem;">
+                <img src="https://picsum.photos/id/237/200/150" class="card-img-top img-thumbnail" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Product 4</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <a href="#" class="btn btn-primary">Inspect</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Products End -->
+    
+{% endblock content %}
